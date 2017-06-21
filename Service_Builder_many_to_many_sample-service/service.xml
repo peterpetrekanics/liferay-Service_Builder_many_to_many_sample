@@ -29,6 +29,9 @@
 		<column name="field3" type="int" />
 		<column name="field4" type="Date" />
 		<column name="field5" type="String" />
+		
+		<column name="barUserName" type="Collection" entity="Bar" mapping-table="Foo_Bar" />		
+<!-- 		<column entity="Bar" mapping-table="Foo_Bar" name="Foo_Bar" type="Collection" /> -->
 
 		<!-- Order -->
 
@@ -46,5 +49,25 @@
 
 		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
 		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	<entity local-service="true" name="Bar" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="barId" primary="true" type="long" />
+		<column name="barUserName" type="String" />
+		<column name="companyId" type="long" />
+		
+		<column name="userName" type="Collection" entity="Foo" mapping-table="Foo_Bar" />
+<!-- 		<column entity="Foo" mapping-table="Foo_Bar" name="Foo_Bar" type="Collection" /> -->
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="barId" />
+		</order>
+
 	</entity>
 </service-builder>
