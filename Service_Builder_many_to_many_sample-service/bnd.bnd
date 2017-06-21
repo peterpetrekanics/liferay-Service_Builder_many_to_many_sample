@@ -1,0 +1,5 @@
+Bundle-Name: Service_Builder_many_to_many_sample-service
+Bundle-SymbolicName: Service_Builder_many_to_many_sample.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
