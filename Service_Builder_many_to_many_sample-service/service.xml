@@ -17,10 +17,8 @@
 		<!-- Audit fields -->
 
 		<column name="companyId" type="long" />
-		<column name="userId" type="long" />
-		<column name="userName" type="String" />
-		<column name="createDate" type="Date" />
-		<column name="modifiedDate" type="Date" />
+		<column name="fooId" type="long" />
+		<column name="fooName" type="String" />
 
 		<!-- Other fields -->
 
@@ -30,8 +28,10 @@
 		<column name="field4" type="Date" />
 		<column name="field5" type="String" />
 		
-		<column name="barUserName" type="Collection" entity="Bar" mapping-table="Foo_Bar" />		
-<!-- 		<column entity="Bar" mapping-table="Foo_Bar" name="Foo_Bar" type="Collection" /> -->
+		<!-- Relationships -->
+		
+		<column entity="Bar" mapping-table="Foos_Bars" name="bars" type="Collection"  />
+		
 
 		<!-- Order -->
 
@@ -49,6 +49,7 @@
 
 		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
 		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+		
 	</entity>
 	
 	
@@ -57,11 +58,12 @@
 		<!-- PK fields -->
 
 		<column name="barId" primary="true" type="long" />
-		<column name="barUserName" type="String" />
+		<column name="barName" type="String" />
 		<column name="companyId" type="long" />
 		
-		<column name="userName" type="Collection" entity="Foo" mapping-table="Foo_Bar" />
-<!-- 		<column entity="Foo" mapping-table="Foo_Bar" name="Foo_Bar" type="Collection" /> -->
+		<!-- Relationships -->
+		
+		<column entity="Foo" mapping-table="Foos_Bars" name="foos" type="Collection"  />
 
 		<!-- Order -->
 
