@@ -17,7 +17,7 @@
 		<!-- Audit fields -->
 
 		<column name="companyId" type="long" />
-		<column name="fooId" type="long" />
+		<column name="fooAmount" type="int" />
 		<column name="fooName" type="String" />
 
 		<!-- Other fields -->
