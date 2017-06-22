@@ -5,5 +5,9 @@ Export-Package:\
 	Service_Builder_many_to_many_sample.exception,\
 	Service_Builder_many_to_many_sample.model,\
 	Service_Builder_many_to_many_sample.service,\
-	Service_Builder_many_to_many_sample.service.persistence
+	Service_Builder_many_to_many_sample.service.persistence,\
+	com.liferay.blade.samples.servicebuilder.exception,\
+	com.liferay.blade.samples.servicebuilder.model,\
+	com.liferay.blade.samples.servicebuilder.service,\
+	com.liferay.blade.samples.servicebuilder.service.persistence
 -includeresource: META-INF/service.xml=../Service_Builder_many_to_many_sample-service/service.xml
